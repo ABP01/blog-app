@@ -10,8 +10,9 @@ class UserSignUp implements UseCase<String, UserSignUpParams> {
   Future<Either<Failure, String>> call(UserSignUpParams params) async {
     return await authRepository.signUpWithEmailPassword(
       name: params.name,
-       email: params.email, 
-       password: params.password);
+      email: params.email,
+      password: params.password,
+    );
   }
 }
 
